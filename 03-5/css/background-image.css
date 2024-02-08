@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* section {
+    width: 200px; 
+    height:200px;
+    border: 1px solid #000;
+    background-image:url(../img/pattern.png);
+    background-repeat:no-repeat;
+    background-position: 100% 50%;
+} */
+
+section {
+    width: 300px; 
+    height:200px;
+    border: 1px solid #000;
+    background-image:url(../img/rose.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

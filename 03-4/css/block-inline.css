@@ -1,0 +1,9 @@
+p {
+    border: 1px solid red;
+    height: 100px;
+}
+strong, em {
+    border: 1px solid blue;
+    height: 50px;
+    display: inline-block;
+}
