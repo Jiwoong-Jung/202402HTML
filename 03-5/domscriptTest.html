@@ -23,6 +23,7 @@
 		</div>
 	</div>
 	<button onclick="moveRight()">오른쪽으로</button>
+	<button onclick="moveDown()">아래로</button>
 	<script>
 
 		let div = document.querySelector('.box').style;
@@ -33,10 +34,14 @@
 
 		let rightDiv = document.querySelector('.wrap .right').style;
 		rightDiv.position = 'relative';
-
-		console.log(div);
+		let i = 5;
+		function moveDown() {
+			i += 5;
+			div.top = i+'px';
+		}
 		function moveRight() {
-			div.right = '100px';
+			i += 5;
+			div.left = i+'px';
 		}
 	</script>
 </body>
