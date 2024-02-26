@@ -14,5 +14,22 @@
     </table>
 
     <button onclick="addRow()">Add Row</button>
+<script>
+function addRow() {
+    let table = document.getElementById("myTable");
+
+    let row = document.createElement("tr");
+    let cell1 = document.createElement("td");
+    let cell2 = document.createElement("td");
+
+    cell1.innerHTML = "홍길동";
+    cell2.innerHTML = "hong@example.com";
+
+    row.appendChild(cell1);
+    row.appendChild(cell2);
+
+    table.appendChild(row);
+}
+</script>
 </body>
 </html>
