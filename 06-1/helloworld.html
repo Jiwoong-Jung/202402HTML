@@ -7,14 +7,20 @@
 
 </head>
 <body>
-    <div id="title"><p>가나다라</p></div>
-
+    <h1 id="title">안녕</h1>
+    <button onclick="clickButton()">클릭</button>
     <script>
+        function clickButton() {
+            console.log('버튼이 클릭되었습니다.');
+        }
+
         const title = document.querySelector('#title');
+        console .log(title);
+
         // title = 100;
-        console.log(title.textContent);
-        console.log(title.innerHTML);
-        console.log(title.innerText);
+        // console.log(title.textContent);
+        // console.log(title.innerHTML);
+        // console.log(title.innerText);
         // document.write('<h1>Hello World</h1>');
         // console.log('Hello World');
         // console.log('안녕하세요');
