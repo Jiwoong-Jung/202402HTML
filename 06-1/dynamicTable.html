@@ -28,17 +28,17 @@ function addRow() {
     let cell1 = document.createElement("td");
     let cell2 = document.createElement("td");
 
-    let name = document.querySelector("#name").value;
-    let email = document.querySelector("#email").value;
-    cell1.innerHTML = name;
-    cell2.innerHTML = email;
+    let name = document.querySelector("#name");
+    let email = document.querySelector("#email");
+    cell1.innerHTML = name.value;
+    cell2.innerHTML = email.value;
 
     row.appendChild(cell1);
     row.appendChild(cell2);
 
     table.appendChild(row);
-    document.querySelector("#name").value = '';
-    document.querySelector("#email").value = '';
+    name.value = "";
+    email.value = "";
 }
 </script>
 </body>
