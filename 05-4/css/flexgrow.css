@@ -1,0 +1,35 @@
+@charset "utf8";
+
+section {
+    width: 100%;
+  display: flex;
+  background: lightcyan;
+}
+
+section article {
+    width: 400px;
+  background: aqua;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  font-size: 50px;
+  color: #fff;
+  display: flex;
+}
+
+section article:nth-child(1) {
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    flex: 1;
+}
+
+section article:nth-child(2) {
+    /* flex-grow: 2; */
+    /* flex-shrink: 2; */
+    flex: 2;
+}
+
+section article:nth-child(3) {
+    /* flex-grow: 3; */
+    /* flex-shrink: 3; */
+    flex: 3;
+ }

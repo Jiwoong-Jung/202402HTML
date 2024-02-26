@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    width: 100%;
+    height: 100wh;
+    background: lightcyan;
+}
+
+section {
+    width: 100%;
+    border: 10px solid blue;
+    box-sizing: border-box;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+}
+
+section article {
+    width: 100px;
+    height: 100px;
+    background: aqua;
+    border: 1px solid #000;
+    
+}
