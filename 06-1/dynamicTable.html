@@ -13,15 +13,17 @@
             <th>Name</th>
             <th>Email</th>
         </tr>
-
-    
     </table>
-
+    <button onclick="show()">보여줘</button>
     <button onclick="addRow()">Add Row</button>
 <script>
+function show() {
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value;
+    console.log(name, email);
+}
 function addRow() {
     let table = document.querySelector("#myTable");
-
     let row = document.createElement("tr");
     let cell1 = document.createElement("td");
     let cell2 = document.createElement("td");
