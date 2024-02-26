@@ -6,17 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <table id="myTable">
+    <input type="text" id="name" placeholder="이름">
+    <input type="text" id="email" placeholder="이메일">
+    <table id="myTable" border="1">
         <tr>
             <th>Name</th>
             <th>Email</th>
         </tr>
+
+    
     </table>
 
     <button onclick="addRow()">Add Row</button>
 <script>
 function addRow() {
-    let table = document.getElementById("myTable");
+    let table = document.querySelector("#myTable");
 
     let row = document.createElement("tr");
     let cell1 = document.createElement("td");
