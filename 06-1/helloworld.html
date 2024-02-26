@@ -12,11 +12,12 @@
     <script>
         function clickButton() {
             console.log('버튼이 클릭되었습니다.');
+            const title = document.querySelector('#title');
+            title.textContent = '반가워요';
+            console.log(title);
         }
 
-        const title = document.querySelector('#title');
-        console .log(title);
-
+    
         // title = 100;
         // console.log(title.textContent);
         // console.log(title.innerHTML);
