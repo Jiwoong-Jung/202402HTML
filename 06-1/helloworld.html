@@ -7,13 +7,14 @@
 
 </head>
 <body>
-    <h1 id="title">안녕</h1>
+    <div id="title">안녕</div>
     <button onclick="clickButton()">클릭</button>
     <script>
         function clickButton() {
             console.log('버튼이 클릭되었습니다.');
             const title = document.querySelector('#title');
-            title.textContent = '반가워요';
+            // title.textContent = '<h1>반가워요</h1>';
+            title.innerHTML = '<h1>반가워요</h1>';
             console.log(title);
         }
 
