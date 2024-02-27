@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="light-bulb2.png">
+    <button onclick="lightOn()">켜기</button>
+    <button onclick="lightOff()">끄기</button>
+    <script>
+        function lightOn() {
+            document.querySelector("img").src = "light-bulb1.png";
+        }
+        function lightOff() {
+            document.querySelector("img").src = "light-bulb2.png";
+        }
+    </script>
+</body>
+</html>
