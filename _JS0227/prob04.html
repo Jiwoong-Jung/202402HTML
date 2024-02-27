@@ -6,11 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form>
         <input type="text" id="num1">
         <input type="text" id="num2">
-        <input type="button" value="더하기" onclick="calc()">
+        <button onclick="calc(); return false">더하기</button>
     </form>
+    
     <script>
         function calc() {
             let num1 = document.querySelector("#num1").value;
