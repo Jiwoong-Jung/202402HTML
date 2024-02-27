@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>구구단</h1>
+    <form>
+        <input type="text" id="num1">단
+        <input type="button" onclick="calc()" value="출력">
+    </form>
+    <script>
+        function calc() {
+            let num1 = document.querySelector("#num1").value;
+            for (let i = 1; i <= 9; i++) {
+                let result = num1 * i;
+                document.write(`<h1>${num1} * ${i} = ${result}</h1>`);
+            }
+        }
+        </script>
+</body>
+</html>
