@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <div id="dv1" style="background-color: red;">
+    <div id="dv1">
         <img id="myImage" src="light-bulb2.png" onclick="changeImage()">
     </div>
     
@@ -29,8 +29,10 @@
             console.log(image.src);
             if (image.src.match("light-bulb2.png")) {
                 image.src = "light-bulb1.png";
+                dv1.style.backgroundColor = "white";
             } else {
                 image.src = "light-bulb2.png";
+                dv1.style.backgroundColor = "black";
             }
         }
         function lightOn() {
