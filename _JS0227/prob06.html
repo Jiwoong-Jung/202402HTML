@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+         #dv1 {
+            width: 270px;      /* box의 너비 */
+            height: 250px;     /* box의 높이 */
+            background-color: #fff; /* box의 배경색 */
+            border: 1px solid #ccc;    /* box의 테두리 */
+            box-sizing: border-box;    /* 테두리와 패딩이 너비 및 높이에 포함되도록 설정 */
+            padding: 20px;     /* box 내부의 패딩 */
+            margin: 10px;      /* box 외부의 마진 */
+        }
+    </style>
 </head>
 <body>
-    <img id="myImage" src="light-bulb2.png" onclick="changeImage()">
+    <div id="dv1" style="background-color: red;">
+        <img id="myImage" src="light-bulb2.png" onclick="changeImage()">
+    </div>
+    
     <button onclick="lightOn()">켜기</button>
     <button onclick="lightOff()">끄기</button>
     <script>
         function changeImage() {
             let image = document.querySelector("#myImage");
+            console.log(image.src);
             if (image.src.match("light-bulb2.png")) {
                 image.src = "light-bulb1.png";
             } else {
