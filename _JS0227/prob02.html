@@ -8,16 +8,19 @@
 <body>
     <div id="gugu"></div>
     <script>
-        document.write("<h1>구구단</h1>");
-        document.write("<table border='1'>");
-        for (let i = 2; i <= 9; i++) {
-            document.write("<tr>");
-            for (let j = 1; j <= 9; j++) {
-                document.write(`<td>${i} * ${j} = ${i * j}</td>`);
+        let gugu = document.querySelector("#gugu");
+        let content = "";
+        content += "<h1>구구단</h1>";
+        content += "<table border='1'>";
+        for (let j = 1; j <= 9; j++) {
+            content += "<tr>";
+            for (let i = 2; i <= 9; i++) {
+                content += `<td>${i} * ${j} = ${i * j}</td>`;
             }
-            document.write("</tr>");
+            content += "</tr>";
         }
-        document.write("</table>");
+        content += "</table>";
+        gugu.innerHTML = content;
     </script>
 </body>
 </html>
