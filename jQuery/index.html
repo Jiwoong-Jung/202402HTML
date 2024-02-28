@@ -7,11 +7,11 @@
 </head>
 <body>
     <p>연습 문장입니다.</p>
-    <button>클릭</button>
+    <button id="btn">클릭</button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $("button").click(function(){
+            $("#btn").click(function(){
                 $("p").hide();
             });
         });
