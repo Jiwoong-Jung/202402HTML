@@ -1,0 +1,2 @@
+﻿Ajax는 Asynchronous JavaScript and XML의 약자입니다.
+Ajax는 동적인 대화형 웹페이지를 만듭니다.
