@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        이름:    <input type='text' id='user' />
+        이메일:    <input type='text' id='email' />
+        <input type='submit' 
+              onclick="checkNotEmpty()" value='확인' />
+    </form>
+<script>
+    function checkNotEmpty() {
+        let field = document.querySelector('#user');
+        let field2 = document.querySelector('#email');
+        if (field.value.length == 0) {
+            alert("이름 필드가 비어있네요!");
+            field.focus();
+            return false;
+        }
+        if (field2.value.length == 0) {
+            alert("이메일 필드가 비어있네요!");
+            field2.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</body>
+</html>
