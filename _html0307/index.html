@@ -6,16 +6,20 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="btn" onclick="alert('클릭!')">Click me</button>
+    <button id="btn" onclick="alert('클릭1!')">Click me</button>
     <button id="btn2" onclick="msg()">Click me</button>
     <button id="btn3">Click me</button>
     <script>
       function msg() {
-        alert("클릭!");
+        alert("클릭2!");
       }
-      document.getElementById("btn3").onclick = function () {
-        alert("클릭!");
+      btn3.onclick = function () {
+        alert("클릭4!");
       };
+    //   document.getElementById("btn3").onclick = function () {
+    //     alert("클릭3!");
+    //   };
+      
     </script>
   </body>
 </html>
