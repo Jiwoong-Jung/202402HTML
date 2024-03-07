@@ -8,9 +8,13 @@
 <body>
     <button id="btn">Click me</button>
     <script>
-        function msg() {
+        const aa = function() {
+            alert("클릭3!");
+        }
+        function msg(aa) {
             alert("클릭1!");
         }
+
         btn.addEventListener("click", msg);
         btn.addEventListener("click", function () {
             alert("클릭2!");
