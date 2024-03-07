@@ -1,0 +1,1 @@
+console.log('Hello, World!', '한글도 출력됩니다.');
