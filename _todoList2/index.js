@@ -15,8 +15,15 @@ const onClick = () => {
     // p 태그 생성(텍스트 박스의 문자 설정)
     const p = document.createElement("p");
     p.textContent = text;
+
+    // button 태그 생성(라벨: [삭제])
+    const button = document.createElement("button");
+    button.textContent = "삭제";
+
     // div 태그 아래에 p 태그와 button 태그 설정
     div.appendChild(p);
+
+
     // li 태그 아래에 위 div 태그 설정
     li.appendChild(div);
 
@@ -28,5 +35,4 @@ const onClick = () => {
 //     alert('Button Clicked2');
 // }
 
-document.getElementById('add-button')
-.addEventListener('click', onClick);
+document.getElementById('add-button').addEventListener('click', onClick);
