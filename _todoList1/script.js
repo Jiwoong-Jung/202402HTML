@@ -1,3 +1,6 @@
+const divEl = document.createElement('div');
+console.log(divEl);
+
 console.log('script.js');
 const title1 = document.getElementById('title');
 console.log(title1);
@@ -8,5 +11,5 @@ console.log(title2);
 const con1 = document.getElementsByClassName('container');
 console.log(con1);
 
-const con2 = document.querySelector('.container');
+const con2 = document.querySelectorAll('.container');
 console.log(con2);
