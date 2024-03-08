@@ -9,6 +9,10 @@ const btnEl = document.createElement('button');
 btnEl.textContent = 'Click Me';
 divEl.appendChild(btnEl);
 
+// document.body.removeChild(divEl);
+const bodyEl = document.querySelector('body');
+bodyEl.textContent = null;
+
 console.log('script.js');
 const title1 = document.getElementById('title');
 console.log(title1);
