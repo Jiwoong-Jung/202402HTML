@@ -5,6 +5,10 @@ document.body.appendChild(divEl);
 pEl.textContent = 'Hello World';
 pEl.style.color = 'red';
 
+const btnEl = document.createElement('button');
+btnEl.textContent = 'Click Me';
+divEl.appendChild(btnEl);
+
 console.log('script.js');
 const title1 = document.getElementById('title');
 console.log(title1);
