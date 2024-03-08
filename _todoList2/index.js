@@ -5,6 +5,12 @@ const onClick = () => {
   const text = textEl.value;
      // 텍스트 박스를 초기화한다(공백)
   textEl.value = "";
+
+    // li 태그 생성
+    const li = document.createElement("li");
+
+    // div 태그 생성
+    const div = document.createElement("div");
 }
 
 // const onClick2 = function() {
