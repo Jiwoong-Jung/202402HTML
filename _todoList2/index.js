@@ -32,7 +32,7 @@ const onClick = () => {
 
     // div 태그 아래에 p 태그와 button 태그 설정
     div.appendChild(p);
-
+    div.appendChild(button);
 
     // li 태그 아래에 위 div 태그 설정
     li.appendChild(div);
