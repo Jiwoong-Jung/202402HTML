@@ -11,6 +11,17 @@ const onClick = () => {
 
     // div 태그 생성
     const div = document.createElement("div");
+
+    // p 태그 생성(텍스트 박스의 문자 설정)
+    const p = document.createElement("p");
+    p.textContent = text;
+    // div 태그 아래에 p 태그와 button 태그 설정
+    div.appendChild(p);
+    // li 태그 아래에 위 div 태그 설정
+    li.appendChild(div);
+
+    // 메모 목록 리스트에 위 li 태그 설정
+    document.getElementById("memo-list").appendChild(li);
 }
 
 // const onClick2 = function() {
