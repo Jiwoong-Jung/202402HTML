@@ -20,6 +20,16 @@ const onClick = () => {
     const button = document.createElement("button");
     button.textContent = "삭제";
 
+    // 버튼 클릭 시, 행 삭체 처리
+    button.addEventListener("click", () => {
+        // 삭제 대상 행(li)을 얻는다
+        // closest는 부모 요소와 일치하는 문자열을 찾는 메서드
+        const deleteTarget = button.closest("li");
+
+        // ul 태그 아래에서 위에서 특정한 행을 삭제한다
+        document.getElementById("memo-list").removeChild(deleteTarget);
+    });
+
     // div 태그 아래에 p 태그와 button 태그 설정
     div.appendChild(p);
 
