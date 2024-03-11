@@ -1,13 +1,13 @@
 function outer() {
-    var a = 'A';
-    var b = 'B';
+    const a = 'A';
+    const b = 'B';
 
     function inner() {
-        var a = 'AA';
+        const a = 'AA';
         console.log(b);
     }
     return inner;
 }
 
-var outerFunc = outer();
+const outerFunc = outer();
 outerFunc(); // B
