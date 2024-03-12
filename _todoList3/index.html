@@ -15,7 +15,6 @@
     <script>
       document.getElementById("addButton").addEventListener("click", () => {
         var value = document.getElementById("todoInput").value;
-        console.log(value);
         if (value) {
           addItem(value);
           document.getElementById("todoInput").value = "";
@@ -27,7 +26,7 @@
         const item = document.createElement("li");
         item.innerText = text;
         const removeButton = document.createElement("button");
-        removeButton.innerText = "Remove";
+        removeButton.innerText = "삭제";
         removeButton.addEventListener("click", function () {
           list.removeChild(item);
         });
