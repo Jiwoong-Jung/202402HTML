@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <input id="todoInput" type="text" placeholder="할 일을 넣으세요">
+    <button id="addButton">Add</button>
+    <ul id="todoList">
+        <!-- 할 일 목록이 여기에 추가됩니다. -->
+    </ul>
+    <script>
+        document.getElementById('addButton').addEventListener('click', function () {
+            var value = document.getElementById('todoInput').value;
+            if (value) {
+                addItem(value);
+                document.getElementById('todoInput').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
