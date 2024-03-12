@@ -13,17 +13,20 @@
         <!-- 할 일 목록이 여기에 추가됩니다. -->
     </ul>
     <script>
+        
+        function addItem(text) {
+            alert('할 일 추가: ' + text);
+        }
+
         document.getElementById('addButton').addEventListener('click', function () {
             var value = document.getElementById('todoInput').value;
+            console.log(value);
             if (value) {
                 addItem(value);
                 document.getElementById('todoInput').value = '';
             }
         });
 
-        function addItem(text) {
-            alert('할 일 추가: ' + text);
-        }
     </script>
 </body>
 </html>
