@@ -14,12 +14,26 @@
     </ul>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-      $(function(){
-        $('#addButton').on('click', function(){
-          alert('버튼이 클릭되었습니다.');
+      $(function () {
+        $("#addButton").on("click", () => {
+          const value = $('#todoInput').val();
+          if (value) {
+            addItem(value);
+            $("#todoInput").val("");
+          }
         });
+
+        const addItem = (data) => {
+          const item = $("<li>").text(data);
+          const removeButton = $("<button>").text("Remove");
+          removeButton.click(function () {
+            item.remove();
+          });
+          item.append(removeButton);
+          $('#todoList').append(item);
+        };
       });
-/*
+      /*
       document.getElementById("addButton").addEventListener("click", () => {
         var value = document.getElementById("todoInput").value;
         if (value) {
