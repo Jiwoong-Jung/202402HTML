@@ -26,10 +26,11 @@
         const addItem = (data) => {
           const item = $("<li>").text(data);
           const removeButton = $("<button>").text("Remove");
+          
+          item.append(removeButton);
           removeButton.click(function () {
             item.remove();
           });
-          item.append(removeButton);
           $('#todoList').append(item);
         };
       });
