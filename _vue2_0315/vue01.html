@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">{{msg}}</div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script>
-        const data1 = {
-                msg: 'Hello 뷰!'
-        };
         new Vue({
             el: '#app',
-            data: data1
+            data: {
+                msg: 'Hello 뷰!'
+            },
         });
     </script>
 </body>
