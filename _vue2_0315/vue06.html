@@ -11,7 +11,9 @@
         <img src="face1.png" alt="이미지">
         <img v-bind:src="filename" alt="이미지">
         <hr>
-        <a v-bind:href="naverUrl">네이버</a>
+        <a v-bind:href="naverUrl" 
+        v-bind:style="{color: mycolor, backgroundColor: mybackground}">
+           네이버</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script>
@@ -19,7 +21,9 @@
             el: '#app',
             data: {
                 filename: 'face2.png',
-                naverUrl: 'http://www.naver.com'
+                naverUrl: 'http://www.naver.com',
+                mycolor: 'red',
+                mybackground: 'green'
             },
         });
     </script>
