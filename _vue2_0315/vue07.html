@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="myName">
+        <input type="text" v-model.lazy="myName">
         <p>나는 {{myName}}입니다.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
