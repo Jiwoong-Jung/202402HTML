@@ -10,13 +10,14 @@
     <div id="app">
         <p>{{msg}}</p>
         <p v-text="msg"></p>
+        <p v-html="msg"></p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script>
         new Vue({
             el: '#app',
             data: {
-                msg: 'Hello 뷰!'
+                msg:`<h1>Hello 뷰!</h1>`
             },
         });
     </script>
