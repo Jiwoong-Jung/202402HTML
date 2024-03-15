@@ -10,7 +10,9 @@
     <div id="app">
         <p>{{$data}}</p>
         <hr>
-        <li v-for="item in $data">{{item}}</li>
+        <li v-for="a in $data">{{a}}</li>
+        <hr>
+        <li v-for="(x, y) in $data">{{x}} : {{y}}</li>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script>
