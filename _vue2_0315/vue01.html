@@ -6,14 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">{{message}}</div>
+    <div id="app">{{msg}}</div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script>
-        var app = new Vue({
+        const data1 = {
+                msg: 'Hello 뷰!'
+        };
+        new Vue({
             el: '#app',
-            data: {
-                message: 'Hello Vue!'
-            }
+            data: data1
         });
     </script>
 </body>
