@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <input id="todoInput" type="text" placeholder="New todo">
+    <button id="addButton">Add</button>
+    <ul id="todoList"></ul>
+
+    <script>
+        $(function() {
+            var API_URL = 'http://localhost:3001/todos';
+
+            $('#addButton').click(function() {
+                var value = $('#todoInput').val();
+                if (value) {
+                    $.ajax({
+                        url: API_URL,
+                        method: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({ title: value }),
+                        success: function(data) {
+                            addItem(data);
+                            $('#todoInput').val('');
+                        }
+                    });
+                }
+            });
+
+            function addItem(todo) {
+                var item = $('<li>').text(todo.title).attr('id', todo.id);
+
+                var removeButton = $('<button>').text('Remove');
+                removeButton.click(function() {
+                    $.ajax({
+                        url: API_URL + '/' + todo.id,
+                        method: 'DELETE',
+                        success: function() {
+                            item.remove();
+                        }
+                    });
+                });
+
+                item.append(removeButton);
+
+                $('#todoList').append(item);
+            }
+
+            $.ajax({
+                url: API_URL,
+                method: 'GET',
+                success: function(data) {
+                    $.each(data, function(i, todo) {
+                        addItem(todo);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

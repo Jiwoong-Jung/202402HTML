@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <input id="todoInput" type="text" placeholder="New todo">
+    <button id="addButton">Add</button>
+    <ul id="todoList"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var API_URL = 'http://localhost:3001/todos';
+
+            document.getElementById('addButton').addEventListener('click', function() {
+                var value = document.getElementById('todoInput').value;
+                if (value) {
+                    fetch(API_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ title: value }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        addItem(data);
+                        document.getElementById('todoInput').value = '';
+                    });
+                }
+            });
+
+            function addItem(todo) {
+                var item = document.createElement('li');
+                item.textContent = todo.title;
+                item.id = todo.id;
+
+                var removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', function() {
+                    fetch(API_URL + '/' + todo.id, {
+                        method: 'DELETE',
+                    })
+                    .then(() => {
+                        item.remove();
+                    });
+                });
+
+                item.appendChild(removeButton);
+
+                document.getElementById('todoList').appendChild(item);
+            }
+
+            fetch(API_URL)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(addItem);
+            });
+        });
+    </script>
+</body>
+</html>
