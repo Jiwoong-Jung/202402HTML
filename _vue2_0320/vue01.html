@@ -10,6 +10,7 @@
     <div id="app">
         <input v-model.lazy="myName" placeholder="이름">
         <p>나는 {{myName}} 입니다.</p>
+        <button v-on:click="submitData">Submit</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
 <script>
@@ -18,7 +19,11 @@
         data: {
             myName: ''
         },
-    
+        methods: {
+            submitData: function() {
+                alert('이름: ' + this.myName);
+            }
+        }
     });
 </script>
 </body>
