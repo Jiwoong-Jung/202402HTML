@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="app">
-        <input v-model.lazy="myName" placeholder="이름">
-        <p>나는 {{myName}} 입니다.</p>
-        <button v-on:click="submitData">Submit</button>
+      <input v-model.lazy="myName" placeholder="이름" />
+      <p>나는 {{myName}} 입니다.</p>
+      <button v-on:click="submitData">Submit</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
-<script>
-    new Vue({
-        el: '#app',
-        data: {
-            myName: ''
-        },
-        methods: {
-            submitData: function() {
-                alert('이름: ' + this.myName);
-            }
-        }
-    });
-</script>
-</body>
+    <script>
+      new Vue({
+          el: '#app',
+          data: {
+              myName: ''
+          },
+          methods: {
+              submitData: function() {
+                 //alert('이름: ' + this.myName);
+                 fetch("http://localhost:3002/names", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ name: this.myName }),
+                 })
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log(data);
+                });
+              }
+          }
+      });
+    </script>
+  </body>
 </html>
