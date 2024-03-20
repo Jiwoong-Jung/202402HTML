@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>체크박스의 ON/OFF를 확인하는 예제</h2>
+		<div id="app">
+			<label><input type="checkbox" v-model="myCheck">
+			체크박스의 상태는 {{ myCheck }}</label>
+		</div>
+
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					myCheck: false
+				}
+			})
+		</script>
+
+	</body>
+</html>
